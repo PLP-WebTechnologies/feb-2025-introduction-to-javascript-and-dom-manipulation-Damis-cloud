@@ -1,0 +1,12 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+  }
+  .dynamic-text {
+    color: blue;
+    font-size: 20px;
+  }
+  .added-element {
+    color: green;
+    font-size: 18px;
+  }

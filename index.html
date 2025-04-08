@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Web Page</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header Section -->
+  <header>
+    <h1>Welcome to My Interactive Web Page</h1>
+  </header>
+
+  <!-- Paragraph Section -->
+  <section>
+    <p id="dynamic-text" class="dynamic-text">This is my week_5 assignment.</p>
+  </section>
+
+  <!-- Button to trigger changes -->
+  <button onclick="changeText()">Yes</button>
+  <button onclick="modifyStyles()">No</button>
+  <button onclick="toggleElement()">Maybe</button>
+
+  <!-- Container for added/removable element -->
+  <section id="additional-section"></section>
+
+  <!-- Footer Section -->
+  <footer>
+    <p>This was created using html, css and JavaScript</p>
+  </footer>
+
+  <script>
+    // Function to change the text content dynamically
+    function changeText() {
+      const textElement = document.getElementById('dynamic-text');
+      textElement.textContent = 'The text content has been changed dynamically!';
+    }
+
+    // Function to modify CSS styles via JavaScript
+    function modifyStyles() {
+      const textElement = document.getElementById('dynamic-text');
+      textElement.style.color = 'red';
+      textElement.style.fontSize = '25px';
+    }
+
+    // Function to add or remove an element when the button is clicked
+    function toggleElement() {
+      const additionalSection = document.getElementById('additional-section');
+      
+      // Check if the section is already present
+      if (additionalSection.innerHTML === '') {
+        const newElement = document.createElement('p');
+        newElement.textContent = 'This is a newly added element!';
+        newElement.classList.add('added-element');
+        additionalSection.appendChild(newElement);
+      } else {
+        // Remove the element
+        additionalSection.innerHTML = '';
+      }
+    }
+  </script>
+</body>
+</html>
